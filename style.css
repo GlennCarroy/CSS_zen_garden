@@ -1,0 +1,163 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Barlow Condensed', sans-serif;
+	line-height: 1.5;
+}
+
+/* For facility, I will style the html
+from top to bottom */
+body {
+	background-color: #387780;
+}
+
+section {
+		position: relative;
+	}
+
+header {
+	width: 25%;
+	height: 600px;
+	background-color: #E83151;
+	padding: 1em;
+	position: absolute;
+	left: 10%;
+}
+
+h1,h2 {
+	color: white;
+}
+h1 {
+	font-size: 40px;
+}
+
+ a {
+	color: black;
+}
+
+.participation a, .requirements a {
+	color: white;
+}
+
+#zen-summary, #zen-preamble {
+	position: absolute;
+	background-color: #DBD4D3;
+	padding: 2em;
+	width: 50%;
+}
+
+#zen-summary{
+	top: 200px;
+	left: 30%;
+}
+
+#zen-preamble {
+	top: 470px;
+	right: 1% ;
+	box-shadow: 3px -2px 6px -1px rgba(117,119,128,1);
+}
+
+#zen-supporting {
+	position: absolute;
+	margin-bottom: 3em;
+	top: 800px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr ;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"explanation participation benefits	"	
+		"requirements requirements requirements"
+		"aside aside footer";}
+						 
+.explanation, .participation, .benefits, .requirements, footer, aside {
+	padding: 2em;
+}
+
+.requirements {
+	grid-area: requirements;
+	background-color: #E83151;
+	color: white;
+}
+
+.explanation {
+	grid-area: explanation;
+	background-color: #D2CCA1;
+}
+
+.participation {
+	grid-area: participation;
+	background-color: #757780;
+	color: #DBD4D3;
+}
+
+.benefits {
+	grid-area: benefits;
+	background-color: #D2CCA1;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #DBD4D3;
+	color: white;
+}
+
+aside {
+	grid-area: aside;
+	background-color: #D2CCA1;
+}
+
+/* TEXT STYLE */
+
+.summary {
+	font-size: 24px;
+}
+
+
+aside ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+aside ul li {
+	width: 20%;
+	padding: 0.5em ;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 2em;
+}
+
+@media screen and (min-width: 1055px){ 
+	#zen-preamble {
+		top: 370px;
+	}
+
+	header {
+		height: 700px;
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+	#zen-supporting {
+	
+	display: grid;
+	grid-template-columns: 1fr ;
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-areas:
+		"explanation"
+		"participation"
+		"benefits"	
+		"requirements"
+		"aside"
+		"footer";}
+	footer {
+		flex-direction: row;
+	}
+}
